@@ -16,4 +16,4 @@
 
 # Canvas-specific .results.json
 .results.json
-/vendor
+vendor/
