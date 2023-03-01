@@ -26,10 +26,10 @@ Review.create(star_rating: 3, comment: "Average at best", property_id: property8
 Review.create(star_rating: 1, comment: "Hakuna maji bana", property_id: property3.id)
 
 puts "Creating agents..."
-agent1 = Agent.create(name: Faker::Name.name, phone_number: 010101010)
-agent2 = Agent.create(name: Faker::Name.name, phone_number: 011111111)
-agent3 = Agent.create(name: Faker::Name.name, phone_number: 012121212)
-agent4 = Agent.create(name: Faker::Name.name, phone_number: 013131313)
-agent4 = Agent.create(name: Faker::Name.name, phone_number: 014141414)
+agent1 = Agent.create(name: Faker::Name.name, phone_number: 010101010, property_id: property1.id)
+agent2 = Agent.create(name: Faker::Name.name, phone_number: 011111111, property_id: property2.id)
+agent3 = Agent.create(name: Faker::Name.name, phone_number: 012121212, property_id: property3.id)
+agent4 = Agent.create(name: Faker::Name.name, phone_number: 013131313, property_id: property4.id)
+agent4 = Agent.create(name: Faker::Name.name, phone_number: 014141414, property_id: property5.id)
 
 puts "✅ Done seeding!"
