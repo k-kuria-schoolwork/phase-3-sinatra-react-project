@@ -13,7 +13,7 @@ property7 = Property.create(image_url: "https://unsplash.com/photos/UxCS2kVhZTc"
 property8 = Property.create(image_url: "https://unsplash.com/photos/7WsmtrrDZUc", name: "Kitisuru Terraces", price: 63550000, address: "456 Kitisuru, Nairobi", description: "Lorem ipusr dolor...")
 property9 = Property.create(image_url: "https://unsplash.com/photos/iSmv0eEcHHM", name: "Langata Heights Villas", price: 38200000, address: "789 Langata Nairobi", description: "Lorem ipusr dolor...")
 
-puts "Creating reviews"
+puts "Creating reviews..."
 Review.create(rating: 5, comment: "Imeiva mbaya", property_id: property5.id)
 Review.create(rating: 2, comment: "Not bad", property_id: property2.id)
 Review.create(rating: 1, comment: "Disaster", property_id: property1.id)
@@ -24,5 +24,12 @@ Review.create(rating: 2, comment: "Wueh, wacha tu", property_id: property3.id)
 Review.create(rating: 3, comment: "Si mbaya vile", property_id: property5.id)
 Review.create(rating: 3, comment: "Average at best", property_id: property8.id)
 Review.create(rating: 1, comment: "Hakuna maji bana", property_id: property3.id)
+
+puts "Creating agents..."
+agent1 = Agent.create(name: Faker::Name.name, phone_number: 010101010)
+agent2 = Agent.create(name: Faker::Name.name, phone_number: 011111111)
+agent3 = Agent.create(name: Faker::Name.name, phone_number: 012121212)
+agent4 = Agent.create(name: Faker::Name.name, phone_number: 013131313)
+agent4 = Agent.create(name: Faker::Name.name, phone_number: 014141414)
 
 puts "✅ Done seeding!"
