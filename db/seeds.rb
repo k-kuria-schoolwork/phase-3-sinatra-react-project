@@ -14,16 +14,16 @@ property8 = Property.create(image_url: "https://unsplash.com/photos/7WsmtrrDZUc"
 property9 = Property.create(image_url: "https://unsplash.com/photos/iSmv0eEcHHM", name: "Langata Heights Villas", price: 38200000, address: "789 Langata Nairobi", description: "Lorem ipusr dolor...")
 
 puts "Creating reviews..."
-Review.create(rating: 5, comment: "Imeiva mbaya", property_id: property5.id)
-Review.create(rating: 2, comment: "Not bad", property_id: property2.id)
-Review.create(rating: 1, comment: "Disaster", property_id: property1.id)
-Review.create(rating: 5, comment: "Amazing", property_id: property7.id)
-Review.create(rating: 4, comment: "Good", property_id: property6.id)
-Review.create(rating: 4, comment: "Nice", property_id: property9.id)
-Review.create(rating: 2, comment: "Wueh, wacha tu", property_id: property3.id)
-Review.create(rating: 3, comment: "Si mbaya vile", property_id: property5.id)
-Review.create(rating: 3, comment: "Average at best", property_id: property8.id)
-Review.create(rating: 1, comment: "Hakuna maji bana", property_id: property3.id)
+Review.create(star_rating: 5, comment: "Imeiva mbaya", property_id: property5.id)
+Review.create(star_rating: 2, comment: "Not bad", property_id: property2.id)
+Review.create(star_rating: 1, comment: "Disaster", property_id: property1.id)
+Review.create(star_rating: 5, comment: "Amazing", property_id: property7.id)
+Review.create(star_rating: 4, comment: "Good", property_id: property6.id)
+Review.create(star_rating: 4, comment: "Nice", property_id: property9.id)
+Review.create(star_rating: 2, comment: "Wueh, wacha tu", property_id: property3.id)
+Review.create(star_rating: 3, comment: "Si mbaya vile", property_id: property5.id)
+Review.create(star_rating: 3, comment: "Average at best", property_id: property8.id)
+Review.create(star_rating: 1, comment: "Hakuna maji bana", property_id: property3.id)
 
 puts "Creating agents..."
 agent1 = Agent.create(name: Faker::Name.name, phone_number: 010101010)
