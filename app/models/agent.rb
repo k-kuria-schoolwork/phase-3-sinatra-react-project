@@ -1,4 +1,4 @@
-lass Agent < ActiveRecord::Base
+class Agent < ActiveRecord::Base
 
     has_many :property
 
