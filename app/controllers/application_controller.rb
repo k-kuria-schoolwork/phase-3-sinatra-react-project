@@ -16,12 +16,11 @@ class ApplicationController < Sinatra::Base
 
   # Post property
   post "/property/" do
-    property = property.create(
+    property = Property.create(
       image_url: params[:image_url],
       name: params[:name],
       description: params[:description],
       address: params[:address],
-      datetime: params[:datetime],
       price: params[:price]
     )
     property.save()
@@ -41,7 +40,7 @@ class ApplicationController < Sinatra::Base
       name: params[:name],
       description: params[:description],
       address: params[:address],
-      datetime: params[:datetime],
+      # datetime: params[:datetime],
       price: params[:price]
     )
 
