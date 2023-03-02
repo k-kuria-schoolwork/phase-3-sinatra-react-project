@@ -1,14 +1,14 @@
 class Property < ActiveRecord::Base
     has_many :reviews
-    has_many :users, through: :reviews  
+    has_many :agents, through: :reviews  
    
     def leave_review(user, star_rating, comment)
-     Review.create(user: user, star_rating: star_rating, comment: comment, property: self)
+     Review.create(agent: agent, star_rating: star_rating, comment: comment, property: self)
     end
    
     def print_all_reviews
      Review.all.map do |rev|
-      puts "Review for #{rev.property.name} by #{rev.user.name}: #{rev.star_rating}. #{rev.comment}"
+      puts "Review for #{rev.property.name} by #{rev.agent.name}: #{rev.star_rating}. #{rev.comment}"
      end
     end
    
