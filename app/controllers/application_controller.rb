@@ -30,31 +30,3 @@ class ApplicationController < Sinatra::Base
       "Status": "HTTP_200_OK"
     }.to_json()
   end
-
-  # Patch
-  patch "/property/update/:id" do 
-    property = Property.find_by(id: params[:id])
-
-    property.update(
-      image_url: params[:image_url],
-      name: params[:name],
-      description: params[:description],
-      address: params[:address],
-      # datetime: params[:datetime],
-      price: params[:price]
-    )
-
-    property.to_json()
-  end
-
-  
-  delete "/property/:id" do 
-    property = Property.find_by(id: params[:id])
-    property.destroy
-    {
-      "message":"Successfully Delete property #{params[:id]}",
-      "Status":"HTTP_Status_OK"
-    }.to_json()
-  end
-
-end
