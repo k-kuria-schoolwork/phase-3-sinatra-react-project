@@ -2,9 +2,9 @@ class Agent < ActiveRecord::Base
 
     has_many :property
 
-    validates :username, presence: :true, uniqueness: true, exclusion: {in: ["admin", "superadmin", "user"]}
-    validates :email, presence: :true, uniqueness: :true, format: {with: /\A(?<username>[^@\s]+)@((?<domain_name>[-a-z0-9]+)\.(?<domain>[a-z]{2,}))\z/i}
-    validates :name, presence: true
+    validates :name, presence: :true, uniqueness: true, exclusion: {in: ["admin", "superadmin", "agent"]}
+    
+    
 
     def favorite_property
         favorite_propery_id = Review.find_by(star_rating: reviews.maximum(:star_rating)).property_id
