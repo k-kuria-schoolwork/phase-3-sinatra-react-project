@@ -1,7 +1,10 @@
 class Property < ActiveRecord::Base
     has_many :reviews
-    has_many :agents, through: :reviews  
-   
+    has_one :agents 
+    
+    validates :address, presence: true, uniqueness: true
+    validates :price, presence: :true, numericality: {greater_than_or_equal_to: 0}
+
     def leave_review(user, star_rating, comment)
      Review.create(agent: agent, star_rating: star_rating, comment: comment, property: self)
     end
@@ -17,6 +20,12 @@ class Property < ActiveRecord::Base
      Review.all.map do |rev|
       all_ratings << rev.star_rating
      end
+
+     def date_sold_cannot_be_in_future
+        if date_sold > Date.today
+            errors.add(:date_sold, "can't be in the future")
+        end
+    end
    
      all_ratings.sum.to_f/all_ratings.count
    

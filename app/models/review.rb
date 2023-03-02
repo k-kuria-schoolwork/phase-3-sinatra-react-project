@@ -1,5 +1,4 @@
 class Review < ActiveRecord::Base
-    belongs_to :agent
     belongs_to :property
    
     def print_review
