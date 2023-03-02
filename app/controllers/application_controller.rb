@@ -18,10 +18,11 @@ class ApplicationController < Sinatra::Base
   post "/property/" do
     property= property.create(
       image_url: params[:image_url],
-      topic: params[:topic],
+      name: params[:name],
       description: params[:description],
-      location: params[:location],
-      datetime: params[:datetime]
+      address: params[:address],
+      datetime: params[:datetime],
+      price: params [:price]
     )
     property.save()
 
@@ -37,10 +38,11 @@ class ApplicationController < Sinatra::Base
 
     property.update(
       image_url: params[:image_url],
-      topic: params[:topic],
+      name: params[:name],
       description: params[:description],
-      location: params[:location],
-      datetime: params[:datetime]
+      address: params[:address],
+      datetime: params[:datetime],
+      price: params [:price]
     )
 
     property.to_json()
