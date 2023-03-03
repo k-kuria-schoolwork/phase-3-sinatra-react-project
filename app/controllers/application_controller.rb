@@ -4,25 +4,25 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-   properties = property.all 
+   properties = Property.all 
     properties.to_json()
   end
 
   # Get Single property
   get "/property/:id" do 
-    property = property.find_by(id: params[:id])
+    property = Property.find_by(id: params[:id])
     property.to_json()
   end
 
   # Post property
   post "/property/" do
-    property= property.create(
+    property= Property.create(
       image_url: params[:image_url],
       name: params[:name],
       description: params[:description],
       address: params[:address],
       datetime: params[:datetime],
-      price: params [:price]
+      price: params[:price]
     )
     property.save()
 
@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
 
   # Patch
   patch "/property/update/:id" do 
-    property = property.find_by(id: params[:id])
+    property = Property.find_by(id: params[:id])
 
     property.update(
       image_url: params[:image_url],
@@ -42,7 +42,7 @@ class ApplicationController < Sinatra::Base
       description: params[:description],
       address: params[:address],
       datetime: params[:datetime],
-      price: params [:price]
+      price: params[:price]
     )
 
     property.to_json()
@@ -50,7 +50,7 @@ class ApplicationController < Sinatra::Base
 
   
   delete "/property/:id" do 
-    property = property.find_by(id: params[:id])
+    property = Property.find_by(id: params[:id])
     property.destroy
     {
       "message":"Successfully Delete property #{params[:id]}",
