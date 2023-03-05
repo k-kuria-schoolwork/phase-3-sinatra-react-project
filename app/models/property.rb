@@ -27,7 +27,7 @@ class Property < ActiveRecord::Base
         end
     end
    
-     all_ratings.sum.to_f/all_ratings.count
+     #all_ratings.sum.to_f/all_ratings.count
    
      # self.reviews.average(:star_rating).to_fexit
      
