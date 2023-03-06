@@ -64,7 +64,5 @@ Start the server
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)]
 
-<<<<<<< HEAD
+
 This project is licensed under the MIT License.
-=======
->>>>>>> origin/Char-dev
