@@ -21,7 +21,6 @@ class ApplicationController < Sinatra::Base
       name: params[:name],
       description: params[:description],
       address: params[:address],
-      datetime: params[:datetime],
       price: params[:price]
     )
     property.save()
@@ -41,10 +40,6 @@ class ApplicationController < Sinatra::Base
       name: params[:name],
       description: params[:description],
       address: params[:address],
-<<<<<<< HEAD
-=======
-      datetime: params[:datetime],
->>>>>>> origin/Char-dev
       price: params[:price]
     )
 
