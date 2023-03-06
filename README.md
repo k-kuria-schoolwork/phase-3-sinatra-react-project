@@ -25,10 +25,11 @@ To use the app:
 ## Participation
 
 This project is a collaborative effort by 
-- [@wamwangi-mathenge](https://github.com/wamwangi-mathenge) ,
-- [@charlotte283](https://github.com/charlotte283) and [@samuelkuria01]
-- (https://github.com/k-kuria-schoolwork) 
-###If you would like to contribute to this project, please feel free to open an issue or submit a pull request.
+- [@wamwangi-mathenge](https://github.com/wamwangi-mathenge) 
+- [@charlotte283](https://github.com/charlotte283) 
+- [@samuelkuria01](https://github.com/k-kuria-schoolwork)
+ 
+### If you would like to contribute to this project, please feel free to open an issue or submit a pull request.
 
 ## License
 
