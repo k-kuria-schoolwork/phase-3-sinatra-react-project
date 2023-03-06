@@ -6,6 +6,8 @@ This is a repository that contains the backend counterpart of a property listing
  The project utilizes Active record to interact  with an SQl database.It contains three models , two of which have a one-to-many relationship.The 'property' model has full CRUD capability. 
  
  The react frontend interact with the API to perfom these CRUD operations.
+ 
+ API Link: https://phase-3-masqani-sinatra-backend-production.up.railway.app/
 
 
 ## Deliverables
